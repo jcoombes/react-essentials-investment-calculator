@@ -1,29 +1,8 @@
+/* 
+  Some tools require a tsconfig.json file in the root of the project.
+  If changing the typescript config, please update the tsconfig.json file in the config folder.
+*/
 {
-  "compilerOptions": {
-    "target": "ES2020",
-    "useDefineForClassFields": true,
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
-    "module": "ESNext",
-    "skipLibCheck": true,
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "resolveJsonModule": true,
-    "isolatedModules": true,
-    "noEmit": true,
-    "jsx": "react-jsx",
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
-    
-    // Path aliases - these mirror the Vite config
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"],
-      "@components/*": ["src/components/*"],
-      "@assets/*": ["src/assets/*"],
-      "@util/*": ["src/util/*"]
-    }
-  },
-  "include": ["src"]
+  "extends": "./config/tsconfig.json",
+  "include": ["./src", "./config"]
 }
